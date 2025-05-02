@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<script src="/assets/frappe/js/frappe.min.js"></script>
+
+<meta name="csrf-token" content="{{ csrf_token }}">
+
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>تسجيل خروج الباص</title>
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 30px;
+            direction: rtl;
+            text-align: right;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        #customer-section {
+            margin-bottom: 20px;
+        }
+        #customer-select {
+            width: 300px;
+            height: 50px;
+            font-size: 18px;
+            padding: 5px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+        #item-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .item-card {
+            width: 150px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .item-card:hover {
+            background-color: #f1f1f1;
+            transform: scale(1.05);
+        }
+        .item-card img {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 8px;
+        }
+        #save-exit {
+            margin-top: 30px;
+            padding: 10px 30px;
+            font-size: 18px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        #save-exit:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<h1>🚪 تسجيل خروج الباص</h1>
+
+<div id="customer-section">
+    <label for="customer-select">اختر السيارة (العميل):</label><br>
+    <select id="customer-select">
+        <option value="">-- اختر السيارة (العميل) --</option>
+    </select>
+</div>
+
+<div id="item-section"></div>
+
+<button id="save-exit">خروج وطباعة الإيصال</button>
+
+<script src="/assets/bus_station/js/bus_exit.js"></script>
+
+</body>
+</html>

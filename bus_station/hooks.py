@@ -31,6 +31,15 @@ app_license = "mit"
 # include js, css files in header of web template
 # web_include_css = "/assets/bus_station/css/bus_station.css"
 # web_include_js = "/assets/bus_station/js/bus_station.js"
+# hooks.py
+
+app_include_js = [
+    "/assets/bus_station/js/bus_entry.js",
+    "/assets/bus_station/js/bus_exit.js"
+]
+
+
+
 
 # include custom scss in every website theme (without file extension ".scss")
 # website_theme_scss = "bus_station/public/scss/website"

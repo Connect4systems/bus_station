@@ -1,0 +1,75 @@
+<html>
+<head>
+    <title>🚌 تسجيل خروج الباص</title>
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            direction: rtl;
+            text-align: right;
+            margin: 20px;
+        }
+        #customer-select {
+            width: 100%;
+            height: 50px;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        #item-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        .item-card {
+            width: 150px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .item-card img {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        #receipt {
+            display: none;
+            width: 80mm;
+            padding: 10px;
+            font-size: 14px;
+        }
+        #receipt h3, #receipt p {
+            margin: 5px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>🚌 تسجيل خروج الباص</h2>
+
+    <select id="customer-select">
+        <option value="">-- اختر السيارة (العميل) --</option>
+    </select>
+
+    <div id="item-section"></div>
+
+    <button id="submit-btn" style="margin-top:20px;padding:10px 20px;">خروج وطباعة الإيصال</button>
+
+    <!-- إيصال الطباعة -->
+    <div id="receipt">
+        <h3>🚍 تسجيل خروج الباص</h3>
+        <p id="date-time"></p>
+        <p id="invoice-number"></p>
+        <p id="customer-name"></p>
+        <p id="item-name"></p>
+        <p id="amount"></p>
+        <p>✅ شكراً لكم ✅</p>
+    </div>
+
+    <script src="/assets/bus_station/js/bus_exit.js"></script>
+
+</body>
+</html>

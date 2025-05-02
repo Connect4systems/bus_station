@@ -1,7 +1,1 @@
-## Bus Station
-
-Gate management system
-
-#### License
-
-mit
+# Bus Station App
